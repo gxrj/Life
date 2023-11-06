@@ -6,4 +6,4 @@ It´s just a simple implementation of Conway's Game of Life.
 
 -> Nothing fancy.
 
-image:assets/life.gif
+![](assets/life.gif)
