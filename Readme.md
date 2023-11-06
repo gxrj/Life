@@ -2,6 +2,6 @@
 
 -> The seeding is just random.
 
--> Nothing fancy.
+-> Nothing fancy, just quick and dirty.
 
 ![](assets/life.gif)
