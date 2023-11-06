@@ -9,10 +9,10 @@ public class Engine {
         run( 15, 60, 200, 0.77f );
     }
 
-    public static void run( Integer gridHeight, Integer gridWidth, Integer limitOfGenerations, Float birthRate ) throws Exception {
+    public static void run( Integer gridHeight, Integer gridWidth, Integer limitOfGenerations, Float nonAliveSeedRate ) throws Exception {
         screen = new Grid( gridHeight, gridWidth );
         var ticks = 0;
-        seedContent( birthRate );
+        seedContent( nonAliveSeedRate );
 
         do{
             screen.render();
@@ -22,11 +22,11 @@ public class Engine {
         } while( ++ticks < limitOfGenerations );
     }
 
-    private static void seedContent( Float birthRate ) {
+    private static void seedContent( Float nonAliveSeedRate ) {
 
         for( int line = 0; line < screen.lines(); line++ )
             for( int column = 0; column < screen.columns(); column++ )
-                Grid.cells[line][column].alive = Math.random() > birthRate;
+                Grid.cells[line][column].alive = Math.random() > nonAliveSeedRate;
     }
 
     private static void update() {
